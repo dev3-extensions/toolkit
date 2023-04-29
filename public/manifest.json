@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Sample Extension",
+  "version": "1.0.0",
+  "description": "This is a sample description",
+  "icons": {
+    "128": "./logo.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab"]
+}
