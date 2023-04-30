@@ -1,12 +1,8 @@
-import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
-import { Link } from 'react-chrome-extension-router'
 
-import { Checkbox } from '../../components/ui/Checkbox'
-
+import { Checkbox } from '~/components/ui/Checkbox'
 import { BackButton } from '~/components/BackButton'
-import { deleteAdvancedOptions } from '../../utils/ChromeUtilities'
-import { MainPage } from './MainPage'
+import { deleteAdvancedOptions } from '~/utils/ChromeUtilities'
 
 /**
  * Data for rendering all of the checkboxes

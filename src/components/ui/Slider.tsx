@@ -1,5 +1,6 @@
-import * as SliderPrimitive from '@radix-ui/react-slider'
 import { clsx } from 'clsx'
+
+import * as SliderPrimitive from '@radix-ui/react-slider'
 
 type SliderProps = {
   setStrengthOption: React.Dispatch<React.SetStateAction<number>>

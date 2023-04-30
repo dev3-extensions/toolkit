@@ -3,11 +3,10 @@ import { Settings } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
-import RadioGroup from '../../components/ui/RadioGroup'
-
 import { BackButton } from '~/components/BackButton'
-import { deleteAllTime, deleteOneDay, deleteOneHour } from '../../utils/ChromeUtilities'
-import { SettingsPage } from './SettingsPage'
+import { RadioGroup } from '~/components/ui/RadioGroup'
+import { SettingsPage } from '~/pages/browser-cleaner/SettingsPage'
+import { deleteAllTime, deleteOneDay, deleteOneHour } from '~/utils/ChromeUtilities'
 
 /**
  * Data for rendering all of the radio buttons

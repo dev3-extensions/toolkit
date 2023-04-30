@@ -1,17 +1,17 @@
 import { Database, Lock, Network, Rocket } from 'lucide-react'
 import { Link } from 'react-chrome-extension-router'
 
-import { MainPage as BrowserCleanerMainPage } from './pages/browser-cleaner/MainPage'
-import { MainPage as DatabaseViewerMainPage } from './pages/database-viewer/MainPage'
-import { MainPage as PacketSnifferMainPage } from './pages/packet-sniffer/MainPage'
-import { MainPage as PasswordManagerMainPage } from './pages/password-manager/MainPage'
+import { MainPage as BrowserCleanerMainPage } from '~/pages/browser-cleaner/MainPage'
+import { MainPage as DatabaseViewerMainPage } from '~/pages/database-viewer/MainPage'
+import { MainPage as PacketSnifferMainPage } from '~/pages/packet-sniffer/MainPage'
+import { MainPage as PasswordManagerMainPage } from '~/pages/password-manager/MainPage'
 
 export const App = () => {
   return (
     <div className="h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <div className="p-4 flex flex-col gap-4">
         <div className="flex gap-4 items-center justify-center">
-          <img src="./logo.png" className="h-12" alt="" />
+          <img src="./logo.png" className="h-12" alt="Dev3 Logo" />
           <p className="text-3xl font-bold">Dev3 Tools</p>
         </div>
         <div>

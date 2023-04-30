@@ -1,4 +1,4 @@
-import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { PasswordInfo } from '~/types/Password'
 import { encrypt } from '~/utils/EncryptHandler'
 
 // Constants to be used

@@ -1,5 +1,6 @@
-import * as SwitchPrimitive from '@radix-ui/react-switch'
 import { clsx } from 'clsx'
+
+import * as SwitchPrimitive from '@radix-ui/react-switch'
 
 type SwitchProps = {
   onCheckedChange: React.Dispatch<React.SetStateAction<boolean>>

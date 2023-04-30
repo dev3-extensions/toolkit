@@ -1,6 +1,6 @@
-import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import { clsx } from 'clsx'
-import { useState } from 'react'
+
+import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 
 type RadioGroupProps = {
   setDurationOption: React.Dispatch<React.SetStateAction<string>>
@@ -10,7 +10,7 @@ type RadioGroupProps = {
   }[]
 }
 
-const RadioGroup = ({ setDurationOption, durations }: RadioGroupProps) => {
+export const RadioGroup = ({ setDurationOption, durations }: RadioGroupProps) => {
   return (
     <form>
       <legend className="font-medium">Select duration to clear:</legend>
@@ -49,5 +49,3 @@ const RadioGroup = ({ setDurationOption, durations }: RadioGroupProps) => {
     </form>
   )
 }
-
-export default RadioGroup

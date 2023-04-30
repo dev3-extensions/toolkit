@@ -1,15 +1,16 @@
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import * as LabelPrimitive from '@radix-ui/react-label'
 import { clsx } from 'clsx'
 import { Check } from 'lucide-react'
 
-interface CheckboxProps {
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
+import * as LabelPrimitive from '@radix-ui/react-label'
+
+type CheckboxProps = {
   text: string
   defaultState: boolean
   onChange: (isChecked: boolean) => void
 }
 
-const Checkbox = (props: CheckboxProps) => {
+export const Checkbox = (props: CheckboxProps) => {
   return (
     <form className="flex items-center">
       <CheckboxPrimitive.Root
@@ -40,5 +41,3 @@ const Checkbox = (props: CheckboxProps) => {
     </form>
   )
 }
-
-export { Checkbox }

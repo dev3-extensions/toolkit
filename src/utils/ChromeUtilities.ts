@@ -1,4 +1,4 @@
-import type { SelectedOptions } from '../pages/browser-cleaner/SettingsPage'
+import type { SelectedOptions } from '~/pages/browser-cleaner/SettingsPage'
 
 // Variable declartions
 const Hour = 1000 * 60 * 60 //1000 milliseconds (1sec) * 60 (60sec) * 60 (60min) - hour calculation

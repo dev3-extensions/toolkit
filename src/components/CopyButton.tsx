@@ -1,9 +1,10 @@
+import { useState } from 'react'
+
 import clsx from 'clsx'
 import { Check, Copy } from 'lucide-react'
-import React from 'react'
 
-import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
 import { PASSWORD_LENGTH } from '~/constants/PasswordLength'
+import { PasswordInfo } from '~/types/Password'
 import { decrypt } from '~/utils/EncryptHandler'
 
 /**
@@ -14,7 +15,7 @@ type CopyButtonProps = {
 }
 
 export const CopyButton = ({ passwordInfo }: CopyButtonProps) => {
-  const [copyStatus, setCopyStatus] = React.useState(false)
+  const [copyStatus, setCopyStatus] = useState(false)
 
   /**
    * Function to copy the password to the clipboard
