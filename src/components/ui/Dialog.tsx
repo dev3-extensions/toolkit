@@ -4,7 +4,7 @@ import { X } from 'lucide-react'
 
 import { SaveButton } from '~/components/SaveButton'
 import { PasswordInfo } from '~/types/Password'
-import { addEntry } from '~/utils/DatabaseHandler'
+import { addPasswordEntry } from '~/utils/DatabaseHandler'
 
 type DialogProps = {
   buttonText: string
@@ -74,7 +74,7 @@ export const Dialog = ({ buttonText, passwordInfo, setPasswordInfo }: DialogProp
                   onClick={async () => {
                     const url = await getUrlDomainOnly()
 
-                    addEntry({
+                    addPasswordEntry({
                       name: passwordInfo.name,
                       password: passwordInfo.password,
                       url: url,

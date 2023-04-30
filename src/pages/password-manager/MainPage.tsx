@@ -12,7 +12,7 @@ import { Dialog } from '~/components/ui/Dialog'
 
 import { SavedPasswordsPage } from '~/pages/password-manager/SavedPasswordsPage'
 import { PasswordInfo } from '~/types/Password'
-import { initDatabase } from '~/utils/DatabaseHandler'
+import { initPasswordDatabase } from '~/utils/DatabaseHandler'
 import { initStorage } from '~/utils/EncryptionHandler'
 import { PasswordGenerator } from '~/utils/PasswordGenerator'
 
@@ -32,7 +32,7 @@ export const MainPage = () => {
   // Runs on page load (only once due to empty dependency array)
   useEffect(() => {
     // Initialising Database
-    initDatabase()
+    initPasswordDatabase()
     // Initialising Local Storage
     initStorage()
   }, [])

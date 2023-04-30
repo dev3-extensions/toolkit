@@ -7,11 +7,16 @@ import { ClearButton } from '~/components/ui/ClearButton'
 import { PauseButton } from '~/components/ui/PauseButton'
 import { SaveButton } from '~/components/ui/SaveButton'
 
+import { initPacketsDatabase, addPacketEntry } from '~/utils/DatabaseHandler'
+
 export const MainPage = () => {
   const [httpRequests, setHttpRequests] = useState<chrome.webRequest.WebResponseCacheDetails[]>([])
   const [isPaused, setIsPaused] = useState(false)
+  initPacketsDatabase()
 
   useEffect(() => {
+    initPacketsDatabase()
+
     if (!isPaused) {
       const handleRequest = (details: chrome.webRequest.WebResponseCacheDetails) => {
         const request: chrome.webRequest.WebResponseCacheDetails = {
@@ -28,6 +33,8 @@ export const MainPage = () => {
           type: details.type,
         }
         setHttpRequests((prevRequests) => [...prevRequests, request])
+
+        addPacketEntry(request)
       }
 
       chrome.webRequest.onCompleted.addListener(handleRequest, { urls: ['<all_urls>'] })
