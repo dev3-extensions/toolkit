@@ -61,7 +61,7 @@ export const initStorage = () => {
      */
     let key256Bit: string = CryptoJS.PBKDF2(passphrase, salt, {
       keySize: 256,
-      iterations: 100,
+      iterations: 10000,
     }).toString()
 
     // Encoding the key

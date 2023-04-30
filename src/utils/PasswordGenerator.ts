@@ -45,6 +45,9 @@ class PasswordGenerator {
       case 2:
         passwordLength = PASSWORD_LENGTH.LONG
         break
+
+      default:
+        passwordLength = length
     }
 
     // The characters pool
