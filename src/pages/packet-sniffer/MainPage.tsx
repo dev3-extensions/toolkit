@@ -39,28 +39,28 @@ export const MainPage = () => {
 
   return (
     <div className="h-[600px] w-[800px] overflow-y-scroll bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <div className="p-4 flex flex-col gap-6">
-        <div className="flex gap-4 items-center">
+      <div className="flex flex-col gap-6 p-4">
+        <div className="flex items-center gap-4">
           <p className="text-3xl font-bold">Packet Sniffer</p>
           <ClearButton setHttpRequests={setHttpRequests} />
           <PauseButton setIsPaused={setIsPaused} />
           <SaveButton />
         </div>
         <div>
-          <table className="w-full border-collapse border border-neutral-600 table-fixed text-sm text-left text-neutral-500 dark:text-neutral-400">
-            <thead className="text-xs text-neutral-700 uppercase bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-400">
+          <table className="w-full table-fixed border-collapse border border-neutral-600 text-left text-sm text-neutral-500 dark:text-neutral-400">
+            <thead className="bg-neutral-50 text-xs uppercase text-neutral-700 dark:bg-neutral-700 dark:text-neutral-400">
               <TableHeader />
             </thead>
-            <tbody className="text-neutral-100 divide-y divide-neutral-700">
+            <tbody className="divide-y divide-neutral-700 text-neutral-100">
               <TableDemoData />
               {httpRequests.map((request, index) => (
                 <tr key={index} className="bg-white dark:bg-neutral-800">
-                  <td className="border border-neutral-500 text-center py-3 w-10">
+                  <td className="w-10 border border-neutral-500 py-3 text-center">
                     <div className="flex items-center justify-center">
                       <input
                         id="checkbox-all-search"
                         type="checkbox"
-                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-800"
                       ></input>
                       <label htmlFor="checkbox-all-search" className="sr-only">
                         checkbox
@@ -68,11 +68,11 @@ export const MainPage = () => {
                     </div>
                   </td>
                   <td className="border border-neutral-600 py-2 text-center">{request.method}</td>
-                  <td className="border border-neutral-600 py-2 pl-2 truncate">{request.url}</td>
+                  <td className="truncate border border-neutral-600 py-2 pl-2">{request.url}</td>
                   <td className="border border-neutral-600 py-2 text-center">
                     {request.statusCode}
                   </td>
-                  <td className="border border-neutral-600 py-2 text-center truncate">
+                  <td className="truncate border border-neutral-600 py-2 text-center">
                     {request.timeStamp}
                   </td>
                   <td className="border border-neutral-600 py-2 text-center">

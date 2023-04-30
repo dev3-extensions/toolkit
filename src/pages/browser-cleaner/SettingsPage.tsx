@@ -61,7 +61,7 @@ export const SettingsPage = () => {
 
   return (
     <div className="min-h-[300px] w-[370px] bg-neutral-100 dark:bg-neutral-900">
-      <header className="flex items-center gap-4 p-6 pr-0 pb-0">
+      <header className="flex items-center gap-4 p-6 pb-0 pr-0">
         <BackButton />
         <h1 className="text-3xl font-bold">Advanced Options</h1>
       </header>

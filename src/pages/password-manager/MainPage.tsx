@@ -52,7 +52,7 @@ export const MainPage = () => {
     <>
       <div className="min-h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
         <div className="flex flex-col gap-4 p-4">
-          <div className="flex gap-4 items-center">
+          <div className="flex items-center gap-4">
             <BackButton />
             <p className="text-3xl font-bold">Password Manager</p>
           </div>

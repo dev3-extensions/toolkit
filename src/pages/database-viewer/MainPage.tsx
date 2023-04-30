@@ -25,11 +25,11 @@ export const MainPage = () => {
   return (
     <>
       <div className="h-[400px] w-[600px] overflow-y-auto bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-        <div className="p-4 flex flex-col gap-4">
-          <div className="flex gap-4 items-center">
+        <div className="flex flex-col gap-4 p-4">
+          <div className="flex items-center gap-4">
             <BackButton />
             <p className="text-3xl font-bold">Database Viewer</p>
-            <div className="bg-neutral-800 rounded-full py-2 px-4 flex gap-4">
+            <div className="flex gap-4 rounded-full bg-neutral-800 px-4 py-2">
               <button>
                 <Plus strokeWidth={2} size={18} />
               </button>
@@ -43,17 +43,17 @@ export const MainPage = () => {
           </div>
           <div className="flex gap-4">
             <div className="w-3/12">
-              <p className="bg-neutral-700 px-3 py-1 rounded text-center font-medium text-sm">
+              <p className="rounded bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
                 IndexedDB
               </p>
             </div>
-            <div className="flex-1 flex flex-col gap-2">
-              <div className="bg-neutral-700 px-3 py-1 rounded text-center font-medium text-sm">
+            <div className="flex flex-1 flex-col gap-2">
+              <div className="rounded bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
                 <p>Database (testing data here)</p>
               </div>
               <div className="flex gap-2">
                 <button
-                  className="bg-neutral-700 hover:bg-neutral-800 px-3 py-1 rounded"
+                  className="rounded bg-neutral-700 px-3 py-1 hover:bg-neutral-800"
                   onClick={() => {
                     setData(parsedTableData)
                   }}
@@ -61,7 +61,7 @@ export const MainPage = () => {
                   Read data
                 </button>
                 <button
-                  className="bg-neutral-700 hover:bg-neutral-800 px-3 py-1 rounded"
+                  className="rounded bg-neutral-700 px-3 py-1 hover:bg-neutral-800"
                   onClick={() => {
                     setData([])
                   }}
@@ -69,7 +69,7 @@ export const MainPage = () => {
                   Clear
                 </button>
               </div>
-              <div className="flex flex-col text-xs gap-4">
+              <div className="flex flex-col gap-4 text-xs">
                 <table>
                   <tr>
                     <th>ID</th>

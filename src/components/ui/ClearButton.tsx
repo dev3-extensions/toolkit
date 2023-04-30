@@ -8,7 +8,7 @@ export const ClearButton = ({ setHttpRequests }: ClearButtonProps) => {
   return (
     <button
       onClick={() => setHttpRequests([])}
-      className="flex items-center gap-2 ml-auto px-4 py-3 bg-red-500 rounded-lg font-medium hover:bg-red-600 active:bg-red-700"
+      className="ml-auto flex items-center gap-2 rounded-lg bg-red-500 px-4 py-3 font-medium hover:bg-red-600 active:bg-red-700"
     >
       <Trash2 size={20} />
       Clear Table

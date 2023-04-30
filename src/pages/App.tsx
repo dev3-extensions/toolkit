@@ -9,8 +9,8 @@ import { MainPage as PasswordManagerMainPage } from '~/pages/password-manager/Ma
 export const App = () => {
   return (
     <div className="h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <div className="p-4 flex flex-col gap-4">
-        <div className="flex gap-4 items-center justify-center">
+      <div className="flex flex-col gap-4 p-4">
+        <div className="flex items-center justify-center gap-4">
           <img src="./logo.png" className="h-12" alt="Dev3 Logo" />
           <p className="text-3xl font-bold">Dev3 Tools</p>
         </div>
@@ -20,7 +20,7 @@ export const App = () => {
         <div className="flex flex-col gap-2">
           <Link
             component={PasswordManagerMainPage}
-            className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
+            className="w-full rounded border border-neutral-400/50 bg-neutral-800 px-5 py-3 hover:bg-neutral-800/75 dark:border-neutral-600/50"
           >
             <div className="flex items-center gap-5">
               <Lock />
@@ -32,7 +32,7 @@ export const App = () => {
           </Link>
           <Link
             component={PacketSnifferMainPage}
-            className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
+            className="w-full rounded bg-neutral-800 px-5 py-3 hover:bg-neutral-800/75"
           >
             <div className="flex items-center gap-5">
               <Network />
@@ -44,7 +44,7 @@ export const App = () => {
           </Link>
           <Link
             component={DatabaseViewerMainPage}
-            className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
+            className="w-full rounded bg-neutral-800 px-5 py-3 hover:bg-neutral-800/75"
           >
             <div className="flex items-center gap-5">
               <Database />
@@ -56,7 +56,7 @@ export const App = () => {
           </Link>
           <Link
             component={BrowserCleanerMainPage}
-            className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
+            className="w-full rounded bg-neutral-800 px-5 py-3 hover:bg-neutral-800/75"
           >
             <div className="flex items-center gap-5">
               <Rocket />
