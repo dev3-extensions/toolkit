@@ -13,6 +13,26 @@ type DialogProps = {
 }
 
 export const Dialog = ({ buttonText, passwordInfo, setPasswordInfo }: DialogProps) => {
+  const getUrlDomainOnly = (): Promise<string> => {
+    return new Promise((resolve) => {
+      let queryOptions = { active: true, lastFocusedWindow: true }
+      chrome.tabs.query(queryOptions, (tab) => {
+        let { hostname } = new URL(tab[0].url!)
+        resolve(hostname)
+      })
+    })
+  }
+
+  const getUrlFull = (): Promise<string> => {
+    return new Promise((resolve) => {
+      let queryOptions = { active: true, lastFocusedWindow: true }
+      chrome.tabs.query(queryOptions, (tab) => {
+        let { href } = new URL(tab[0].url!)
+        resolve(href)
+      })
+    })
+  }
+
   return (
     <DialogPrimitive.Root>
       <DialogPrimitive.Trigger>
@@ -51,15 +71,13 @@ export const Dialog = ({ buttonText, passwordInfo, setPasswordInfo }: DialogProp
             <div className="flex justify-end">
               <DialogPrimitive.Close asChild>
                 <button
-                  onClick={() => {
-                    let queryOptions = { active: true, lastFocusedWindow: true }
-                    chrome.tabs.query(queryOptions, (tab) => {
-                      let url = new URL(tab[0].url!)
-                      addEntry({
-                        name: passwordInfo.name,
-                        password: passwordInfo.password,
-                        url: url.hostname,
-                      })
+                  onClick={async () => {
+                    const url = await getUrlDomainOnly()
+
+                    addEntry({
+                      name: passwordInfo.name,
+                      password: passwordInfo.password,
+                      url: url,
                     })
                   }}
                   className={clsx(
