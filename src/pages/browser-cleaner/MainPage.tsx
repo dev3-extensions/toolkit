@@ -6,7 +6,7 @@ import { Link } from 'react-chrome-extension-router'
 import { BackButton } from '~/components/BackButton'
 import { RadioGroup } from '~/components/ui/RadioGroup'
 import { SettingsPage } from '~/pages/browser-cleaner/SettingsPage'
-import { deleteAllTime, deleteOneDay, deleteOneHour } from '~/utils/ChromeUtilities'
+import { deleteAllTime, deleteOneDay, deleteOneHour } from '~/utils/BrowserCleaner'
 
 /**
  * Data for rendering all of the radio buttons

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 
 import { TableDemoData } from '~/components/TableDemoData'
 import { TableHeader } from '~/components/TableHeader'
-
 import { ClearButton } from '~/components/ui/ClearButton'
 import { PauseButton } from '~/components/ui/PauseButton'
 import { SaveButton } from '~/components/ui/SaveButton'

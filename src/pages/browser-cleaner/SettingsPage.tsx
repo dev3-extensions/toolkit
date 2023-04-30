@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import { Checkbox } from '~/components/ui/Checkbox'
 import { BackButton } from '~/components/BackButton'
-import { deleteAdvancedOptions } from '~/utils/ChromeUtilities'
+import { Checkbox } from '~/components/ui/Checkbox'
+import { deleteAdvancedOptions } from '~/utils/BrowserCleaner'
 
 /**
  * Data for rendering all of the checkboxes

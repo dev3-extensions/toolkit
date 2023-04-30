@@ -1,5 +1,5 @@
 import { PasswordInfo } from '~/types/Password'
-import { encrypt } from '~/utils/EncryptHandler'
+import { encrypt } from '~/utils/EncryptionHandler'
 
 // Constants to be used
 const DB_NAME = 'passwords-list'

@@ -3,17 +3,17 @@ import { List } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
+import { BackButton } from '~/components/BackButton'
 import { CopyButton } from '~/components/CopyButton'
 import { GenerateButton } from '~/components/GenerateButton'
 import { PasswordField } from '~/components/PasswordField'
 import { PasswordOptions } from '~/components/PasswordOptions'
 import { Dialog } from '~/components/ui/Dialog'
 
-import { BackButton } from '~/components/BackButton'
-import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
 import { SavedPasswordsPage } from '~/pages/password-manager/SavedPasswordsPage'
+import { PasswordInfo } from '~/types/Password'
 import { initDatabase } from '~/utils/DatabaseHandler'
-import { initStorage } from '~/utils/EncryptHandler'
+import { initStorage } from '~/utils/EncryptionHandler'
 import { PasswordGenerator } from '~/utils/PasswordGenerator'
 
 export const MainPage = () => {

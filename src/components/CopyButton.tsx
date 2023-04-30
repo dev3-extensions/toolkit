@@ -1,11 +1,10 @@
-import { useState } from 'react'
-
 import clsx from 'clsx'
 import { Check, Copy } from 'lucide-react'
+import { useState } from 'react'
 
 import { PASSWORD_LENGTH } from '~/constants/PasswordLength'
 import { PasswordInfo } from '~/types/Password'
-import { decrypt } from '~/utils/EncryptHandler'
+import { decrypt } from '~/utils/EncryptionHandler'
 
 /**
  * Type for the props of the CopyButton component

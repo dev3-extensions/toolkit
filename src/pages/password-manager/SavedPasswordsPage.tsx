@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
 import { CopyButton } from '~/components/CopyButton'
-import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+
 import { MainPage } from '~/pages/password-manager/MainPage'
+import { PasswordInfo } from '~/types/Password'
 import { getAllPasswords } from '~/utils/DatabaseHandler'
 
 export const SavedPasswordsPage = () => {
