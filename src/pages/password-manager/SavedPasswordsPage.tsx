@@ -3,10 +3,10 @@ import { ArrowLeft } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
-import { CopyButton } from '~/components/extensions/password-manager/components/CopyButton'
-import { getAllPasswords } from '~/components/extensions/password-manager/database/DatabaseHandler'
+import { CopyButton } from '~/components/CopyButton'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
 import { MainPage } from '~/pages/password-manager/MainPage'
+import { getAllPasswords } from '~/utils/DatabaseHandler'
 
 export const SavedPasswordsPage = () => {
   const [passwords, setPasswords] = useState<PasswordInfo[]>([])

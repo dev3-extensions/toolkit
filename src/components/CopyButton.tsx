@@ -2,9 +2,9 @@ import clsx from 'clsx'
 import { Check, Copy } from 'lucide-react'
 import React from 'react'
 
-import { decrypt } from '~/components/extensions/password-manager/backend/EncryptHandler'
-import { PASSWORD_LENGTH } from '~/components/extensions/password-manager/constants/PasswordLength'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { PASSWORD_LENGTH } from '~/constants/PasswordLength'
+import { decrypt } from '~/utils/EncryptHandler'
 
 /**
  * Type for the props of the CopyButton component

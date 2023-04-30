@@ -3,18 +3,18 @@ import { List } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
-import { CopyButton } from '~/components/extensions/password-manager/components/CopyButton'
-import { GenerateButton } from '~/components/extensions/password-manager/components/GenerateButton'
-import { PasswordField } from '~/components/extensions/password-manager/components/PasswordField'
-import { PasswordOptions } from '~/components/extensions/password-manager/components/PasswordOptions'
-import { Dialog } from '~/components/extensions/password-manager/components/ui/Dialog'
+import { CopyButton } from '~/components/CopyButton'
+import { GenerateButton } from '~/components/GenerateButton'
+import { PasswordField } from '~/components/PasswordField'
+import { PasswordOptions } from '~/components/PasswordOptions'
+import { Dialog } from '~/components/ui/Dialog'
 
 import { BackButton } from '~/components/BackButton'
-import { initStorage } from '~/components/extensions/password-manager/backend/EncryptHandler'
-import { PasswordGenerator } from '~/components/extensions/password-manager/backend/PasswordGenerator'
-import { initDatabase } from '~/components/extensions/password-manager/database/DatabaseHandler'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
 import { SavedPasswordsPage } from '~/pages/password-manager/SavedPasswordsPage'
+import { initDatabase } from '~/utils/DatabaseHandler'
+import { initStorage } from '~/utils/EncryptHandler'
+import { PasswordGenerator } from '~/utils/PasswordGenerator'
 
 export const MainPage = () => {
   // State to store password options

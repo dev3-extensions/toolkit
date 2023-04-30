@@ -1,5 +1,5 @@
-import { encrypt } from '~/components/extensions/password-manager/backend/EncryptHandler'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { encrypt } from '~/utils/EncryptHandler'
 
 // Constants to be used
 const DB_NAME = 'passwords-list'

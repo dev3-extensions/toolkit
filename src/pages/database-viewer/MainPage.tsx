@@ -2,7 +2,7 @@ import { Plus, Search, Settings } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { BackButton } from '~/components/BackButton'
-import table from '../../components/extensions/database-viewer/table.json'
+import table from '~/data/table.json'
 
 type Table = {
   name: string

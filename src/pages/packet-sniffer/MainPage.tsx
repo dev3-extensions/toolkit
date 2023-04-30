@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 
-import { TableDemoData } from '~/components/extensions/packet-sniffer/components/TableDemoData'
-import { TableHeader } from '~/components/extensions/packet-sniffer/components/TableHeader'
+import { TableDemoData } from '~/components/TableDemoData'
+import { TableHeader } from '~/components/TableHeader'
 
-import { ClearButton } from '~/components/extensions/packet-sniffer/components/ui/ClearButton'
-import { PauseButton } from '~/components/extensions/packet-sniffer/components/ui/PauseButton'
-import { SaveButton } from '~/components/extensions/packet-sniffer/components/ui/SaveButton'
+import { ClearButton } from '~/components/ui/ClearButton'
+import { PauseButton } from '~/components/ui/PauseButton'
+import { SaveButton } from '~/components/ui/SaveButton'
 
 export const MainPage = () => {
   const [httpRequests, setHttpRequests] = useState<chrome.webRequest.WebResponseCacheDetails[]>([])

@@ -1,8 +1,8 @@
 import { ChevronDown, ChevronUp, Settings } from 'lucide-react'
 import React, { useState } from 'react'
 
-import { Slider } from '~/components/extensions/password-manager/components/ui/Slider'
-import { Switch } from '~/components/extensions/password-manager/components/ui/Switch'
+import { Slider } from '~/components/ui/Slider'
+import { Switch } from '~/components/ui/Switch'
 
 type PasswordOptionsProps = {
   setStrengthOption: React.Dispatch<React.SetStateAction<number>>

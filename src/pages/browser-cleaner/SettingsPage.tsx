@@ -2,10 +2,10 @@ import { ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
-import { Checkbox } from '../../components/extensions/browser-cleaner/components/Checkbox'
+import { Checkbox } from '../../components/ui/Checkbox'
 
 import { BackButton } from '~/components/BackButton'
-import { deleteAdvancedOptions } from '../../components/extensions/browser-cleaner/utils/ChromeUtilities'
+import { deleteAdvancedOptions } from '../../utils/ChromeUtilities'
 import { MainPage } from './MainPage'
 
 /**

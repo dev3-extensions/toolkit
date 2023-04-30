@@ -2,9 +2,9 @@ import * as DialogPrimitive from '@radix-ui/react-dialog'
 import clsx from 'clsx'
 import { X } from 'lucide-react'
 
-import { SaveButton } from '~/components/extensions/password-manager/components/SaveButton'
-import { addEntry } from '~/components/extensions/password-manager/database/DatabaseHandler'
+import { SaveButton } from '~/components/SaveButton'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { addEntry } from '~/utils/DatabaseHandler'
 
 type DialogProps = {
   buttonText: string
