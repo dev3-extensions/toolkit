@@ -50,10 +50,10 @@ export const MainPage = () => {
         </div>
         <div>
           <table className="w-full table-fixed border-collapse border border-neutral-600 text-left text-sm text-neutral-500 dark:text-neutral-400">
-            <thead className="bg-neutral-50 text-xs uppercase text-neutral-700 dark:bg-neutral-700 dark:text-neutral-400">
+            <thead className="bg-neutral-300 text-xs uppercase text-neutral-700 dark:bg-neutral-700 dark:text-neutral-400">
               <TableHeader />
             </thead>
-            <tbody className="divide-y divide-neutral-700 text-neutral-100">
+            <tbody className="divide-y divide-neutral-700 text-neutral-900 dark:text-neutral-100">
               <TableDemoData />
               {httpRequests.map((request, index) => (
                 <tr key={index} className="bg-white dark:bg-neutral-800">

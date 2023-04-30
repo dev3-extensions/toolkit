@@ -20,7 +20,7 @@ export const App = () => {
         <div className="flex flex-col gap-2">
           <Link
             component={PasswordManagerMainPage}
-            className="w-full rounded border border-neutral-400/50 bg-neutral-800 px-5 py-3 hover:bg-neutral-800/50 dark:border-neutral-600/50"
+            className="w-full rounded border border-neutral-400/50 px-5 py-3 hover:bg-blue-500/25 dark:border-neutral-600/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50"
           >
             <div className="flex items-center gap-5">
               <Lock />
@@ -32,7 +32,7 @@ export const App = () => {
           </Link>
           <Link
             component={PacketSnifferMainPage}
-            className="w-full rounded border border-neutral-400/50 bg-neutral-800 px-5 py-3 hover:bg-neutral-800/50 dark:border-neutral-600/50"
+            className="w-full rounded border border-neutral-400/50 px-5 py-3 hover:bg-blue-500/25 dark:border-neutral-600/50 dark:bg-neutral-800"
           >
             <div className="flex items-center gap-5">
               <Network />
@@ -44,7 +44,7 @@ export const App = () => {
           </Link>
           <Link
             component={DatabaseViewerMainPage}
-            className="w-full rounded border border-neutral-400/50 bg-neutral-800 px-5 py-3 hover:bg-neutral-800/50 dark:border-neutral-600/50"
+            className="w-full rounded border border-neutral-400/50 px-5 py-3 hover:bg-blue-500/25 dark:border-neutral-600/50 dark:bg-neutral-800"
           >
             <div className="flex items-center gap-5">
               <Database />
@@ -56,7 +56,7 @@ export const App = () => {
           </Link>
           <Link
             component={BrowserCleanerMainPage}
-            className="w-full rounded border border-neutral-400/50 bg-neutral-800 px-5 py-3 hover:bg-neutral-800/50 dark:border-neutral-600/50"
+            className="w-full rounded border border-neutral-400/50 px-5 py-3 hover:bg-blue-500/25 dark:border-neutral-600/50 dark:bg-neutral-800"
           >
             <div className="flex items-center gap-5">
               <Rocket />

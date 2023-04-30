@@ -50,7 +50,7 @@ export const MainPage = () => {
 
   return (
     <>
-      <div className="h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+      <div className="h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:text-neutral-100">
         <div className="flex flex-col gap-4 p-4">
           <div className="flex items-center gap-4">
             <BackButton />

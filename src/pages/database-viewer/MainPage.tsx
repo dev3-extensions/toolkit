@@ -29,7 +29,7 @@ export const MainPage = () => {
           <div className="flex items-center gap-4">
             <BackButton />
             <p className="text-3xl font-bold">Database Viewer</p>
-            <div className="flex gap-4 rounded-full bg-neutral-800 px-4 py-2">
+            <div className="flex gap-4 rounded-full bg-neutral-300 dark:bg-neutral-800 hover:bg-blue-500/25 px-4 py-2">
               <button>
                 <Plus strokeWidth={2} size={18} />
               </button>
@@ -43,17 +43,17 @@ export const MainPage = () => {
           </div>
           <div className="flex gap-4">
             <div className="w-3/12">
-              <p className="rounded bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
+              <p className="rounded bg-neutral-300 dark:bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
                 IndexedDB
               </p>
             </div>
             <div className="flex flex-1 flex-col gap-2">
-              <div className="rounded bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
+              <div className="rounded bg-neutral-300 dark:bg-neutral-700 px-3 py-1 text-center text-sm font-medium">
                 <p>Database (testing data here)</p>
               </div>
               <div className="flex gap-2">
                 <button
-                  className="rounded bg-neutral-700 px-3 py-1 hover:bg-neutral-800"
+                  className="rounded bg-neutral-300 dark:bg-neutral-700 px-3 py-1 hover:bg-blue-500/25"
                   onClick={() => {
                     setData(parsedTableData)
                   }}
@@ -61,7 +61,7 @@ export const MainPage = () => {
                   Read data
                 </button>
                 <button
-                  className="rounded bg-neutral-700 px-3 py-1 hover:bg-neutral-800"
+                  className="rounded bg-neutral-300 dark:bg-neutral-700 px-3 py-1 hover:bg-blue-500/25"
                   onClick={() => {
                     setData([])
                   }}
