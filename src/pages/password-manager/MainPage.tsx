@@ -13,8 +13,8 @@ import { BackButton } from '~/components/BackButton'
 import { initStorage } from '~/components/extensions/password-manager/backend/EncryptHandler'
 import { PasswordGenerator } from '~/components/extensions/password-manager/backend/PasswordGenerator'
 import { initDatabase } from '~/components/extensions/password-manager/database/DatabaseHandler'
-import { SavedPasswordsPage } from '~/components/extensions/password-manager/pages/SavedPasswordsPage'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { SavedPasswordsPage } from '~/pages/password-manager/SavedPasswordsPage'
 
 export const MainPage = () => {
   // State to store password options

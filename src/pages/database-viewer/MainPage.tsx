@@ -2,7 +2,7 @@ import { Plus, Search, Settings } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 import { BackButton } from '~/components/BackButton'
-import table from './table.json'
+import table from '../../components/extensions/database-viewer/table.json'
 
 type Table = {
   name: string
@@ -11,7 +11,7 @@ type Table = {
   description: string
 }
 
-function DatabaseViewer() {
+export const MainPage = () => {
   const [data, setData] = useState<Table[]>([])
 
   const parsedTableData = table.table1.slice(1).map((row) => ({
@@ -94,5 +94,3 @@ function DatabaseViewer() {
     </>
   )
 }
-
-export default DatabaseViewer

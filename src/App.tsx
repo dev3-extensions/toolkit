@@ -1,14 +1,13 @@
+import { Database, Lock, Network, Rocket } from 'lucide-react'
 import { Link } from 'react-chrome-extension-router'
 
-import { Database, Lock, Network, Rocket } from 'lucide-react'
-import { BrowserCleanerMainPage } from './components/extensions/browser-cleaner/pages/MainPage'
-import DatabaseViewer from './components/extensions/database-viewer/App'
-import PacketSniffer from './components/extensions/packet-sniffer/App'
-import { MainPage } from './components/extensions/password-manager/pages/MainPage'
+import { MainPage as BrowserCleanerMainPage } from './pages/browser-cleaner/MainPage'
+import { MainPage as DatabaseViewerMainPage } from './pages/database-viewer/MainPage'
+import { MainPage as PacketSnifferMainPage } from './pages/packet-sniffer/MainPage'
+import { MainPage as PasswordManagerMainPage } from './pages/password-manager/MainPage'
 
 export const App = () => {
   return (
-    // 800x600 px is the maximum popup size for Chrome extensions
     <div className="h-[420px] w-[370px] bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <div className="p-4 flex flex-col gap-4">
         <div className="flex gap-4 items-center justify-center">
@@ -20,7 +19,7 @@ export const App = () => {
         </div>
         <div className="flex flex-col gap-2">
           <Link
-            component={MainPage}
+            component={PasswordManagerMainPage}
             className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
           >
             <div className="flex items-center gap-5">
@@ -32,7 +31,7 @@ export const App = () => {
             </div>
           </Link>
           <Link
-            component={PacketSniffer}
+            component={PacketSnifferMainPage}
             className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
           >
             <div className="flex items-center gap-5">
@@ -44,7 +43,7 @@ export const App = () => {
             </div>
           </Link>
           <Link
-            component={DatabaseViewer}
+            component={DatabaseViewerMainPage}
             className="bg-neutral-800 hover:bg-neutral-800/75 px-5 py-3 rounded w-full"
           >
             <div className="flex items-center gap-5">

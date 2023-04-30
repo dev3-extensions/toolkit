@@ -5,8 +5,8 @@ import { Link } from 'react-chrome-extension-router'
 
 import { CopyButton } from '~/components/extensions/password-manager/components/CopyButton'
 import { getAllPasswords } from '~/components/extensions/password-manager/database/DatabaseHandler'
-import { MainPage } from '~/components/extensions/password-manager/pages/MainPage'
 import { PasswordInfo } from '~/components/extensions/password-manager/types/Password'
+import { MainPage } from '~/pages/password-manager/MainPage'
 
 export const SavedPasswordsPage = () => {
   const [passwords, setPasswords] = useState<PasswordInfo[]>([])

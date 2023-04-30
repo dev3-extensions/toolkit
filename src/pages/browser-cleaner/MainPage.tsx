@@ -3,10 +3,14 @@ import { Settings } from 'lucide-react'
 import { useState } from 'react'
 import { Link } from 'react-chrome-extension-router'
 
-import RadioGroup from '../components/RadioGroup'
+import RadioGroup from '../../components/extensions/browser-cleaner/components/RadioGroup'
 
 import { BackButton } from '~/components/BackButton'
-import { deleteAllTime, deleteOneDay, deleteOneHour } from '../utils/ChromeUtilities'
+import {
+  deleteAllTime,
+  deleteOneDay,
+  deleteOneHour,
+} from '../../components/extensions/browser-cleaner/utils/ChromeUtilities'
 import { SettingsPage } from './SettingsPage'
 
 /**
@@ -18,7 +22,7 @@ const durationsData = [
   { id: 'alltime', title: 'All time' },
 ]
 
-export const BrowserCleanerMainPage = () => {
+export const MainPage = () => {
   // State for the duration option
   const [durationOption, setDurationOption] = useState(durationsData[0].title)
 

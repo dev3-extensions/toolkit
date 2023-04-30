@@ -7,7 +7,7 @@ import { ClearButton } from '~/components/extensions/packet-sniffer/components/u
 import { PauseButton } from '~/components/extensions/packet-sniffer/components/ui/PauseButton'
 import { SaveButton } from '~/components/extensions/packet-sniffer/components/ui/SaveButton'
 
-export default function PacketSniffer() {
+export const MainPage = () => {
   const [httpRequests, setHttpRequests] = useState<chrome.webRequest.WebResponseCacheDetails[]>([])
   const [isPaused, setIsPaused] = useState(false)
 
