@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { BackButton } from '~/components/BackButton'
 
 import { TableDemoData } from '~/components/TableDemoData'
 import { TableHeader } from '~/components/TableHeader'
@@ -41,6 +42,7 @@ export const MainPage = () => {
     <div className="h-[600px] w-[800px] overflow-y-scroll bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <div className="flex flex-col gap-6 p-4">
         <div className="flex items-center gap-4">
+          <BackButton />
           <p className="text-3xl font-bold">Packet Sniffer</p>
           <ClearButton setHttpRequests={setHttpRequests} />
           <PauseButton setIsPaused={setIsPaused} />
