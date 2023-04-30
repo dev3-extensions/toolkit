@@ -1,11 +1,15 @@
 import React from 'react'
+import { Router } from 'react-chrome-extension-router'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 
-import App from './App'
+import { App } from './App'
+
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 )

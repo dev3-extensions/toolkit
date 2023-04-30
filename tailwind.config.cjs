@@ -10,5 +10,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Initialize with default values (see options below)
+    require('tailwindcss-radix')(),
+  ],
 }
