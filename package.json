@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "docs": "typedoc --out docs ./src/**/*"
+    "docs": "typedoc --out docs ./src/**/*",
+    "build-and-docs": "npm run build && npm run docs"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.3",
