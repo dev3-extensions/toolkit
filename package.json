@@ -17,6 +17,7 @@
     "@radix-ui/react-switch": "^1.0.2",
     "clsx": "^1.2.1",
     "crypto-js": "^4.1.1",
+    "indexeddb-export-import": "^2.1.5",
     "lucide-react": "^0.188.0",
     "react": "^18.2.0",
     "react-chrome-extension-router": "^1.4.0",

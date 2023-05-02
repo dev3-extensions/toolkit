@@ -48,6 +48,7 @@ class PasswordGenerator {
 
       default:
         passwordLength = length
+        break
     }
 
     // The characters pool
