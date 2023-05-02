@@ -34,7 +34,7 @@ You will need the following to run this project:
    Use a random 32-character string for better security. You can generate one securely using the following command:
 
    ```sh
-   openssl rand -base64 32
+   openssl rand -base64 24
    ```
 
    Example key:
