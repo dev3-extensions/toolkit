@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react'
-import { BackButton } from '~/components/BackButton'
 
+import { BackButton } from '~/components/BackButton'
 import { TableDemoData } from '~/components/TableDemoData'
 import { TableHeader } from '~/components/TableHeader'
 import { ClearButton } from '~/components/ui/ClearButton'
 import { PauseButton } from '~/components/ui/PauseButton'
 import { SaveButton } from '~/components/ui/SaveButton'
 
-import { initPacketsDatabase, addPacketEntry } from '~/utils/DatabaseHandler'
+import { addPacketEntry, initPacketsDatabase } from '~/utils/DatabaseHandler'
+
+const convertTimestampToDate = (timestamp: number): string => {
+  const date = new Date(timestamp);
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const seconds = date.getSeconds().toString().padStart(2, '0');
+
+  return `${hours}:${minutes}:${seconds}`;
+}
 
 export const MainPage = () => {
   const [httpRequests, setHttpRequests] = useState<chrome.webRequest.WebResponseCacheDetails[]>([])
@@ -31,6 +40,9 @@ export const MainPage = () => {
           tabId: details.tabId,
           timeStamp: details.timeStamp,
           type: details.type,
+          ip: details.ip,
+          responseHeaders: details.responseHeaders,
+          initiator: details.initiator,
         }
         setHttpRequests((prevRequests) => [...prevRequests, request])
 
@@ -61,7 +73,7 @@ export const MainPage = () => {
               <TableHeader />
             </thead>
             <tbody className="divide-y divide-neutral-700 text-neutral-900 dark:text-neutral-100">
-              <TableDemoData />
+              {/* <TableDemoData /> */}
               {httpRequests.map((request, index) => (
                 <tr key={index} className="bg-white dark:bg-neutral-800">
                   <td className="w-10 border border-neutral-500 py-3 text-center">
@@ -82,10 +94,10 @@ export const MainPage = () => {
                     {request.statusCode}
                   </td>
                   <td className="truncate border border-neutral-600 py-2 text-center">
-                    {request.timeStamp}
+                    {convertTimestampToDate(request.timeStamp)}
                   </td>
                   <td className="border border-neutral-600 py-2 text-center">
-                    {request.fromCache}
+                    {request.fromCache.toString()}
                   </td>
                   <td className="border border-neutral-600 py-2 text-center">{request.ip}</td>
                 </tr>
