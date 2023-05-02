@@ -1,7 +1,7 @@
 export const TableDemoData = () => {
   return (
     <>
-      <tr className="bg-white dark:bg-neutral-800">
+      <tr className="bg-white hover:bg-neutral-300 dark:bg-neutral-800 hover:dark:bg-neutral-950/25">
         <td className="border border-neutral-600 py-2 text-center">
           <div className="flex items-center justify-center">
             <input
@@ -21,7 +21,7 @@ export const TableDemoData = () => {
         <td className="border border-neutral-600 py-2 text-center">false</td>
         <td className="border border-neutral-600 py-2 text-center">undefined</td>
       </tr>
-      <tr className="bg-white dark:bg-neutral-800">
+      <tr className="bg-white hover:bg-neutral-300 dark:bg-neutral-800 hover:dark:bg-neutral-950/25">
         <td className="border border-neutral-600 py-2 text-center">
           <div className="flex items-center justify-center">
             <input

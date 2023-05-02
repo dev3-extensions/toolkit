@@ -10,12 +10,12 @@ import { SaveButton } from '~/components/ui/SaveButton'
 import { addPacketEntry, initPacketsDatabase } from '~/utils/DatabaseHandler'
 
 const convertTimestampToDate = (timestamp: number): string => {
-  const date = new Date(timestamp);
-  const hours = date.getHours().toString().padStart(2, '0');
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const seconds = date.getSeconds().toString().padStart(2, '0');
+  const date = new Date(timestamp)
+  const hours = date.getHours().toString().padStart(2, '0')
+  const minutes = date.getMinutes().toString().padStart(2, '0')
+  const seconds = date.getSeconds().toString().padStart(2, '0')
 
-  return `${hours}:${minutes}:${seconds}`;
+  return `${hours}:${minutes}:${seconds}`
 }
 
 export const MainPage = () => {
@@ -64,8 +64,8 @@ export const MainPage = () => {
           <BackButton />
           <p className="text-3xl font-bold">Packet Sniffer</p>
           <ClearButton setHttpRequests={setHttpRequests} />
-          <PauseButton setIsPaused={setIsPaused} />
           <SaveButton />
+          <PauseButton isPaused={isPaused} setIsPaused={setIsPaused} />
         </div>
         <div>
           <table className="w-full table-fixed border-collapse border border-neutral-600 text-left text-sm text-neutral-500 dark:text-neutral-400">
@@ -75,7 +75,10 @@ export const MainPage = () => {
             <tbody className="divide-y divide-neutral-700 text-neutral-900 dark:text-neutral-100">
               {/* <TableDemoData /> */}
               {httpRequests.map((request, index) => (
-                <tr key={index} className="bg-white dark:bg-neutral-800">
+                <tr
+                  key={index}
+                  className="bg-white hover:bg-neutral-300 dark:bg-neutral-800 hover:dark:bg-neutral-950/25"
+                >
                   <td className="w-10 border border-neutral-500 py-3 text-center">
                     <div className="flex items-center justify-center">
                       <input
