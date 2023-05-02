@@ -40,7 +40,7 @@ You will need the following to run this project:
    Example key:
 
    ```ts
-   VITE_MASTER_KEY = 'xcQ+U#LIDUS^kY&8BZPCKFV+Sy^xSX7A'
+   VITE_MASTER_KEY="xcQ+U#LIDUS^kY&8BZPCKFV+Sy^xSX7A"
    ```
 
 3. Install NPM packages
