@@ -14,7 +14,7 @@ You will need the following to run this project:
 
   ```sh
   # On Windows
-  winget install OpenJS.NodeJS
+  winget install OpenJS.NodeJS # or scoop install nodejs
 
   # On Linux (Ubuntu)
   curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&\
@@ -25,15 +25,19 @@ You will need the following to run this project:
 
 1. Clone the repo
 
-2. Copy the `.env.example` and create a new `.env` file on the root directory
+2. Copy `.env.example` to `.env` and update the `VITE_MASTER_KEY` value
 
    ```sh
    cp .env.example .env
    ```
 
-   The `.env` file should have `VITE_MASTER_KEY`
-   for better practice use a random string with lenght 32
-   the `.env` file should look like this
+   Use a random 32-character string for better security. You can generate one securely using the following command:
+
+   ```sh
+   openssl rand -base64 32
+   ```
+
+   Example key:
 
    ```ts
    VITE_MASTER_KEY = 'xcQ+U#LIDUS^kY&8BZPCKFV+Sy^xSX7A'
@@ -67,7 +71,7 @@ You will need the following to run this project:
 
 ## Documentation
 
-Run the following commands to generate the full documentation based on JSDoc comments:
+Run the following commands to generate the full documentation based on JSDoc comments in the code.
 
 1. Install [TypeDoc](https://typedoc.org/)
 
@@ -78,7 +82,7 @@ Run the following commands to generate the full documentation based on JSDoc com
 2. Generate the documentation with the following command
 
 ```sh
-   npx typedoc --out docs ./src/**/*
+   npm run docs
 ```
 
 3. The documentation can be found in `docs/index.html`
@@ -88,4 +92,4 @@ Run the following commands to generate the full documentation based on JSDoc com
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - for code formatting
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - for autocomplete in Tailwind CSS classes
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - for linting and error checking
-- [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag) - for auto-completing any tags like in HTML or React
+- [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag) - for auto-renaming and auto-completing tags in HTML or React
