@@ -27,17 +27,17 @@ You will need the following to run this project:
 
 2. Copy the `.env.example` and create a new `.env` file on the root directory
 
-    ```sh
-    cp .env.example .env
-    ```
-    
-    The `.env` file should have `VITE_MASTER_KEY`
-    for better practice use a random string with lenght 32
-    the `.env` file should look like this
+   ```sh
+   cp .env.example .env
+   ```
 
-    ```ts
-    VITE_MASTER_KEY="xcQ+U#LIDUS^kY&8BZPCKFV+Sy^xSX7A"
-    ```
+   The `.env` file should have `VITE_MASTER_KEY`
+   for better practice use a random string with lenght 32
+   the `.env` file should look like this
+
+   ```ts
+   VITE_MASTER_KEY = 'xcQ+U#LIDUS^kY&8BZPCKFV+Sy^xSX7A'
+   ```
 
 3. Install NPM packages
 
@@ -64,6 +64,24 @@ You will need the following to run this project:
    3. Click the LOAD UNPACKED button and select the `dist` directory.
 
 7. Profit! :tada:
+
+## Documentation
+
+Run the following commands to generate the full documentation based on JSDoc comments:
+
+1. Install [TypeDoc](https://typedoc.org/)
+
+```sh
+   npm install --save-dev typedoc
+```
+
+2. Generate the documentation with the following command
+
+```sh
+   npx typedoc --out docs ./src/**/*
+```
+
+3. The documentation can be found in `docs/index.html`
 
 ## Recommended VS Code Extensions for Development
 
