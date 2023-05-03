@@ -24,10 +24,13 @@ export const MainPage = () => {
   initPacketsDatabase()
 
   useEffect(() => {
+    // initialize the database
     initPacketsDatabase()
 
+    // if the state says we're not paused, then begin listening for HTTP requests
     if (!isPaused) {
       const handleRequest = (details: chrome.webRequest.WebResponseCacheDetails) => {
+        // create a new request object using the same fields as the details object
         const request: chrome.webRequest.WebResponseCacheDetails = {
           url: details.url,
           method: details.method,
@@ -44,18 +47,23 @@ export const MainPage = () => {
           responseHeaders: details.responseHeaders,
           initiator: details.initiator,
         }
+
+        // add this request to the list of requests that we've seen
         setHttpRequests((prevRequests) => [...prevRequests, request])
 
+        // add this request to the database
         addPacketEntry(request)
       }
 
+      // listen for HTTP requests
       chrome.webRequest.onCompleted.addListener(handleRequest, { urls: ['<all_urls>'] })
 
+      // when the component unmounts, remove the event listener
       return () => {
         chrome.webRequest.onCompleted.removeListener(handleRequest)
       }
     }
-  }, [])
+  }, [isPaused])
 
   return (
     <div className="h-[600px] w-[800px] overflow-y-scroll bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
