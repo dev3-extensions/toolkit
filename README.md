@@ -4,7 +4,7 @@
 
 # 🚀 Dev3 Toolkit
 
-<p>A Chrome extension with powerful utilities for developers. Manage passwords, inspect IndexedDB, sniff HTTP packets, and clean browser data.</p>
+<p>A Chrome extension with powerful utilities for developers and power users. Manage passwords, inspect IndexedDB, sniff HTTP packets, and clean browser data.</p>
 
 <a href="#-introduction">Introduction</a>
 <span>&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
