@@ -44,7 +44,6 @@ Dev3 Toolkit is a multi-tool Chrome extension designed for developers and power 
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[Radix UI](https://radix-ui.com/primitives/)** - Accessible, unstyled UI components
 - **[Chrome Extensions API](https://developer.chrome.com/docs/extensions/reference/api)** - For interacting with browser data and functionality
-- **[CryptoJS](https://www.npmjs.com/package/crypto-js)** - Secure password management
 
 ## 📂 Directory Structure
 
