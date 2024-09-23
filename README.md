@@ -69,7 +69,7 @@ Dev3 Toolkit is a multi-tool Chrome extension designed for developers and power 
 
 You will need the following to run this project:
 
-- Node.js
+1. Node.js
 
 Install Node.js from [here](https://nodejs.org/en/download/), or using your preferred package manager (Brew, Winget, Scoop, etc) with the following commands:
 
@@ -81,7 +81,7 @@ brew install node@20
 winget install OpenJS.NodeJS # or scoop install nodejs
 ```
 
-- Chrome or any Chromium-based browser
+2. Chrome or any Chromium-based browser
 
 You can use any Chromium-based browser like Arc, Edge, or Brave to load the extension.
 
