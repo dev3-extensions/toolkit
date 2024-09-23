@@ -145,6 +145,13 @@ You can use any Chromium-based browser like Arc, Edge, or Brave to load the exte
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - for linting and maintaining code quality
 - [Auto Complete Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-complete-tag) - for auto-renaming and auto-completing React tags
 
+## ✌️ Team
+
+- [Aryan Prince](https://x.com/aryxnprince)
+- [Andrea La Fauci De Leo](https://github.com/Bosurgi)
+- [Lewis Mann](https://github.com/LEDMann)
+- [Lewis Johnson](https://github.com/lewisj576)
+
 ## 🎯 Roadmap
 
 - [ ] Migrate to Manifest V3
